@@ -1,0 +1,68 @@
+require:
+  - rubocop-rspec
+  - rubocop-rails
+  - rubocop-performance
+
+AllCops:
+  NewCops: enable
+  DisplayCopNames: true
+  TargetRubyVersion: 2.7.7
+  Exclude:
+    - 'bin/*'
+    - 'db/**/*'
+    - 'node_modules/**/*'
+    - 'tmp/**/*'
+    - 'vendor/**/*'
+  CacheRootDirectory: tmp
+
+Rails:
+  Enabled: true
+  Exclude:
+    - 'Guardfile'
+    - 'bin/**/*'
+    - 'config/*'
+    - 'config/**/*'
+    - 'tmp/**/*'
+    - 'Rakefile'
+
+RSpec:
+  Include:
+    - 'spec/**/*_spec.rb'
+
+RSpec/ExampleLength:
+  Enabled: false
+
+RSpec/MultipleMemoizedHelpers:
+  Enabled: true
+  Max: 10
+
+RSpec/MultipleExpectations:
+  Max: 3
+
+Style/Documentation:
+  Enabled: false
+
+Style/TrailingCommaInArrayLiteral:
+  Enabled: true
+  EnforcedStyleForMultiline: comma
+
+Style/TrailingCommaInHashLiteral:
+  Enabled: true
+  EnforcedStyleForMultiline: comma
+
+Style/TrailingCommaInArguments:
+  Enabled: true
+  EnforcedStyleForMultiline: comma
+
+Metrics/BlockLength:
+  Exclude:
+  - 'spec/**/*_spec.rb'
+
+Metrics/AbcSize:
+  Max: 25
+
+Metrics/MethodLength:
+  Max: 30
+
+Metrics/ClassLength:
+  Max: 200

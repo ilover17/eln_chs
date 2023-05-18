@@ -1,0 +1,13 @@
+production:
+  :editors:
+    :chemdraw:
+      :label: ChemDrawJS
+      :license: license file
+      :extJs:
+        - external javascript files to be included
+    :marvinjs:
+      :label: MarvinJS
+      :license: license file
+      :extJs:
+        - external javascript files to be included
+      :extSrc: external file

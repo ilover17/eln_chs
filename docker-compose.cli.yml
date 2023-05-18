@@ -1,0 +1,63 @@
+name: eln-chs
+networks:
+    chemotion:
+        labels:
+            net.chemotion.cli.project: eln-chs
+services:
+    converter:
+        environment:
+            - SECRET_KEY=8b935e527737eefc99f354c6
+        labels:
+            net.chemotion.cli.project: eln-chs
+    db:
+        labels:
+            net.chemotion.cli.project: eln-chs
+    eln:
+        environment:
+            - PUBLIC_URL=http://localhost:4000
+            - SECRET_KEY_BASE=d69daf22b01c2ca250ebbbcf
+        labels:
+            net.chemotion.cli.project: eln-chs
+        volumes:
+            - ./app:/chemotion/app
+            - ./data:/chemotion/data
+    executor:
+        depends_on:
+            - db
+        environment:
+            - PUBLIC_URL=http://localhost:4000
+            - SECRET_KEY_BASE=d69daf22b01c2ca250ebbbcf
+        image: ptrxyz/chemotion:eln-1.5.3
+        networks:
+            - chemotion
+        profiles:
+            - execution
+        volumes:
+            - ./shared/pullin:/shared
+            - ./shared/backup:/backup
+            - ./app:/chemotion/app
+            - ./data:/chemotion/data
+    ketchersvc:
+        labels:
+            net.chemotion.cli.project: eln-chs
+    msconvert:
+        labels:
+            net.chemotion.cli.project: eln-chs
+    spectra:
+        labels:
+            net.chemotion.cli.project: eln-chs
+    worker:
+        environment:
+            - PUBLIC_URL=http://localhost:4000
+            - SECRET_KEY_BASE=d69daf22b01c2ca250ebbbcf
+        labels:
+            net.chemotion.cli.project: eln-chs
+volumes:
+    chemotion_db:
+        labels:
+            net.chemotion.cli.project: eln-chs
+        name: eln-chs_chemotion_db
+    spectra:
+        labels:
+            net.chemotion.cli.project: eln-chs
+        name: eln-chs_chemotion_spectra
