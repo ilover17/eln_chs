@@ -116,7 +116,7 @@ export default class SampleForm extends React.Component {
           checked={sample.is_top_secret}
           onChange={e => this.handleFieldChanged('is_top_secret', e.target.checked)}
         >
-          Top secret
+          绝密
         </Checkbox>
       );
     }
@@ -536,10 +536,10 @@ export default class SampleForm extends React.Component {
             <td colSpan="4">
               <div className="name-form">
                 <div style={{ width: '25%' }}>
-                  {this.textInput(sample, 'name', 'Name')}
+                  {this.textInput(sample, 'name', '名称')}
                 </div>
                 <div style={{ width: '25%', paddingLeft: '5px' }}>
-                  {this.textInput(sample, 'external_label', 'External label')}
+                  {this.textInput(sample, 'external_label', '外部标签')}
                 </div>
                 <div style={{ width: '25%', paddingLeft: '5px' }}>
                   <TextRangeWithAddon

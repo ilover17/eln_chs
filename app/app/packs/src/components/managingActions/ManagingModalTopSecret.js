@@ -8,7 +8,7 @@ export default class ManagingModalTopSecret extends React.Component {
   render() {
     return (
       <div>
-        One of the selected elements contains one or several samples marked as top secret.
+        所选元素之一包含一个或多个标记为绝密的样本。
       </div>
     )
   }

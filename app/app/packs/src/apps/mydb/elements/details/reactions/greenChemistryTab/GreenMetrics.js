@@ -111,23 +111,23 @@ export default class GreenMetrics extends React.Component {
 
     const columnDefs = [
       {
-        headerName: 'Simple E factor (sEF)',
+        headerName: '简单 E 因子 (sEF)',
         field: 'sef',
       },
       {
-        headerName: 'Complete E factor (cEF)',
+        headerName: '当前 E 因子 (cEF)',
         field: 'cef',
       },
       {
-        headerName: 'Custom E factor',
+        headerName: '自定义 E 因子',
         field: 'cuef',
       },
       {
-        headerName: 'Atom economy (AE)',
+        headerName: '原子(AE)',
         field: 'ae',
       },
       {
-        headerName: 'Custom Atom economy',
+        headerName: '自定义原子',
         field: 'cae',
       },
     ];

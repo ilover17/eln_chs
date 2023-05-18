@@ -168,14 +168,14 @@ export default class ContainerComponent extends Component {
           <FormControl
             type="text"
             label="Name"
-            value={container.name || '***'}
+            value={container.name || ''}
             // eslint-disable-next-line react/jsx-no-bind
             onChange={this.handleInputChange.bind(this, 'name')}
             disabled={readOnly || disabled} />
         </Col>
         <Col md={4}>
           <div style={{ marginBottom: 11 }}>
-            <label>Status</label>
+            <label>状态</label>
             <Select
               name='status'
               multi={false}
@@ -189,7 +189,7 @@ export default class ContainerComponent extends Component {
         </Col>
         <Col md={12}>
           <div style={{ marginBottom: 11 }}>
-            <ControlLabel>Type (Chemical Methods Ontology)</ControlLabel>
+            <ControlLabel>类型 (Chemical Methods Ontology)</ControlLabel>
             <OlsTreeSelect
               selectName="chmo"
               selectedValue={container.extended_metadata.kind || ''}
@@ -200,7 +200,7 @@ export default class ContainerComponent extends Component {
         </Col>
         <Col md={12}>
           <FormGroup>
-            <ControlLabel>Content</ControlLabel>
+            <ControlLabel>具体内容</ControlLabel>
             {quill}
           </FormGroup>
           <FormGroup>

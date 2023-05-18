@@ -87,7 +87,7 @@ export default class ReactionDetailsProperties extends Component {
               />
             </div>
             <FormGroup>
-              <ControlLabel>Type (Name Reaction Ontology)</ControlLabel>
+              <ControlLabel>类型 (Name Reaction Ontology)</ControlLabel>
               <OlsTreeSelect
                 selectName="rxno"
                 selectedValue={(reaction.rxno && reaction.rxno.trim()) || ''}
@@ -97,7 +97,7 @@ export default class ReactionDetailsProperties extends Component {
             </FormGroup>
             <Row>
               <Col md={12}>
-                <div><b>Dangerous Products</b></div>
+                <div><b>危险产品</b></div>
                 <Select
                   name="dangerous_products"
                   multi
@@ -110,11 +110,11 @@ export default class ReactionDetailsProperties extends Component {
             </Row>
           </ListGroupItem>
           <ListGroupItem>
-            <h4 className="list-group-item-heading" >TLC-Control</h4>
+            <h4 className="list-group-item-heading" >TLC控制</h4>
             <Row>
               <Col md={6}>
                 <FormGroup>
-                  <ControlLabel>Solvents (parts)</ControlLabel>
+                  <ControlLabel>溶剂</ControlLabel>
                   <FormGroup>
                     <InputGroup>
                       <DropdownButton
@@ -131,7 +131,7 @@ export default class ReactionDetailsProperties extends Component {
                         type="text"
                         value={reaction.tlc_solvents || ''}
                         disabled={!permitOn(reaction) || reaction.isMethodDisabled('tlc_solvents')}
-                        placeholder="Solvents as parts..."
+                        placeholder="溶剂..."
                         onChange={event => this.props.onInputChange('tlc_solvents', event)}
                       />
                     </InputGroup>
@@ -140,12 +140,12 @@ export default class ReactionDetailsProperties extends Component {
               </Col>
               <Col md={6}>
                 <FormGroup>
-                  <ControlLabel>Rf-Value</ControlLabel>
+                  <ControlLabel>Rf值</ControlLabel>
                   <FormControl
                     type="text"
                     value={reaction.rf_value || ''}
                     disabled={!permitOn(reaction) || reaction.isMethodDisabled('rf_value')}
-                    placeholder="Rf-Value..."
+                    placeholder="Rf值..."
                     onChange={event => this.props.onInputChange('rfValue', event)}
                   />
                 </FormGroup>
@@ -154,12 +154,12 @@ export default class ReactionDetailsProperties extends Component {
             <Row>
               <Col md={12}>
                 <FormGroup>
-                  <ControlLabel>TLC-Description</ControlLabel>
+                  <ControlLabel>TLC描述</ControlLabel>
                   <FormControl
                     componentClass="textarea"
                     value={reaction.tlc_description || ''}
                     disabled={!permitOn(reaction) || reaction.isMethodDisabled('tlc_description')}
-                    placeholder="TLC-Description..."
+                    placeholder="TLC描述..."
                     onChange={event => this.props.onInputChange('tlcDescription', event)}
                   />
                 </FormGroup>

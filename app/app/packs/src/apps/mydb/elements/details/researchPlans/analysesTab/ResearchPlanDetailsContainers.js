@@ -260,12 +260,12 @@ export default class ResearchPlanDetailsContainers extends Component {
             }
             <div className="lower-text">
               <div className="main-title">{container.name}</div>
-              <div className="sub-title">Type: {kind}</div>
-              <div className="sub-title">Status: {status} &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; {insText}</div>
+              <div className="sub-title">类型: {kind}</div>
+              <div className="sub-title">状态: {status} &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; {insText}</div>
 
               <div className="desc sub-title">
                 <span style={{ float: 'left', marginRight: '5px' }}>
-                  Content:
+                  内容:
                 </span>
                 <QuillViewer value={contentOneLine} preview />
               </div>
@@ -278,10 +278,10 @@ export default class ResearchPlanDetailsContainers extends Component {
 
     const containerHeaderDeleted = (container) => {
       const kind = container.extended_metadata.kind && container.extended_metadata.kind !== '';
-      const titleKind = kind ? (` - Type: ${(container.extended_metadata.kind.split('|')[1] || container.extended_metadata.kind).trim()}`) : '';
+      const titleKind = kind ? (` - 类型: ${(container.extended_metadata.kind.split('|')[1] || container.extended_metadata.kind).trim()}`) : '';
 
       const status = container.extended_metadata.status && container.extended_metadata.status !== '';
-      const titleStatus = status ? (` - Status: ${container.extended_metadata.status}`) : '';
+      const titleStatus = status ? (` - 类型： ${container.extended_metadata.status}`) : '';
 
       return (
         <div style={{ width: '100%' }}>

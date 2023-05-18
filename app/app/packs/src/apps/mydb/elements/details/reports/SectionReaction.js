@@ -179,10 +179,10 @@ const MaterialContent = ({show, starting_materials, reactants, products}) => {
     <Table striped condensed hover>
       <thead>
         <tr>
-          <th>Formula</th>
-          <th>Mass(g)</th>
-          <th>Vol(ml)</th>
-          <th>Amount(mmol)</th>
+          <th>配方</th>
+          <th>质量(g)</th>
+          <th>体积(ml)</th>
+          <th>数量(mmol)</th>
           <th>Equiv/Yield</th>
         </tr>
       </thead>

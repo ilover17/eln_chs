@@ -86,7 +86,7 @@ export default class WellplateDetailsContainers extends Component {
         ? (` - Type: ${container.extended_metadata['kind'].split('|')[1] || container.extended_metadata['kind']}`) : ''}
       {(container.extended_metadata['status'] &&
         container.extended_metadata['status'] != '')
-        ? (' - Status: ' + container.extended_metadata['status']) : ''}
+        ? (' - 类型： ' + container.extended_metadata['status']) : ''}
       <Button bsSize="xsmall" bsStyle="danger"
         className="button-right" disabled={readOnly}
         onClick={() => {
@@ -104,7 +104,7 @@ export default class WellplateDetailsContainers extends Component {
       {(container.extended_metadata['kind'] &&
         container.extended_metadata['kind'] != '')
         ? (` - Type: ${container.extended_metadata['kind'].split('|')[1] || container.extended_metadata['kind']}`) : ''}
-      {(container.extended_metadata['status'] && container.extended_metadata['status'] != '') ? (' - Status: ' + container.extended_metadata['status']) : ''}
+      {(container.extended_metadata['status'] && container.extended_metadata['status'] != '') ? (' - 类型： ' + container.extended_metadata['status']) : ''}
     </strike>
       <Button className="pull-right" bsSize="xsmall" bsStyle="danger" onClick={() => this.handleUndo(container)}>
         <i className="fa fa-undo"></i>

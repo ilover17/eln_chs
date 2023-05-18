@@ -16,7 +16,7 @@ import NavigationModal from 'src/components/navigation/NavigationModal';
 import SearchFilter from 'src/components/navigation/search/SearchFilter.js'
 import PropTypes from 'prop-types';
 
-const colMenuTooltip = <Tooltip id="col_menu_tooltip">Toggle sidebar</Tooltip>;
+const colMenuTooltip = <Tooltip id="col_menu_tooltip">边栏隐藏显示</Tooltip>;
 
 export default class Navigation extends React.Component {
   constructor(props) {

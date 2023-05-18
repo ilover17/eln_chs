@@ -72,7 +72,7 @@ const SpectraEditorBtn = ({
     <OverlayTrigger
     placement="bottom"
     delayShow={500}
-    overlay={<Tooltip id="spectra">Spectra Editor {spcInfos.length > 0 ? '' : ': Reprocess'}</Tooltip>}
+    overlay={<Tooltip id="spectra">光谱编辑器 {spcInfos.length > 0 ? '' : ': Reprocess'}</Tooltip>}
   >{spcInfos.length > 0 ? (
     <ButtonGroup className="button-right">
       <SplitButton
@@ -94,7 +94,7 @@ const SpectraEditorBtn = ({
           }}
           disabled={!hasJcamp || !sample.can_update}
         >
-          <i className="fa fa-refresh" /> Reprocess
+          <i className="fa fa-refresh" /> 重新处理
         </MenuItem>
         {
           hasEditedJcamp ? 
@@ -106,7 +106,7 @@ const SpectraEditorBtn = ({
                 confirmRegenerateEdited(event);
               }}
             >
-              <i className="fa fa-refresh" /> Regenerate .edit.jdx files
+              <i className="fa fa-refresh" /> 重新生成.edit.jdx文件
             </MenuItem>) : <span></span>
         }
       </SplitButton>
@@ -129,7 +129,7 @@ const SpectraEditorBtn = ({
             <OverlayTrigger
             placement="top"
             delayShow={500}
-            overlay={<Tooltip id="spectra_nmrium_wrapper">Process with NMRium</Tooltip>}
+            overlay={<Tooltip id="spectra_nmrium_wrapper"> NMRium 流程</Tooltip>}
             >
                 <ButtonGroup className="button-right">
                     <Button
@@ -181,7 +181,7 @@ const editModeBtn = (toggleMode, isDisabled) => (
   >
     <span>
       <i className="fa fa-edit" />&nbsp;
-      Edit mode
+      编辑模式
     </span>
   </Button>
 );
@@ -195,7 +195,7 @@ const orderModeBtn = (toggleMode, isDisabled) => (
   >
     <span>
       <i className="fa fa-reorder" />&nbsp;
-      Order mode
+      列表模式
     </span>
   </Button>
 );
@@ -231,7 +231,7 @@ const HeaderDeleted = ({ container, handleUndo, mode }) => {
   const mKind = container.extended_metadata.kind;
   const mStatus = container.extended_metadata.status;
   const kind = (mKind && mKind !== '') ? ` - Type: ${(mKind.split('|')[1] || mKind).trim()}` : '';
-  const status = (mStatus && mStatus !== '') ? ` - Status: ${mStatus}` : '';
+  const status = (mStatus && mStatus !== '') ? ` - 类型： ${mStatus}` : '';
 
   return (
     <div className="analysis-header-delete">
@@ -344,7 +344,7 @@ const headerBtnGroup = (
           onClick={onToggleAddToReport}
           defaultChecked={inReport}
         >
-          <span>Add to Report</span>
+          <span>添加到报告</span>
         </Checkbox>
       </span>
     </div>
@@ -409,11 +409,11 @@ const HeaderNormal = ({
           <div className="main-title">{container.name}</div>
           <div className="sub-title">Type: {kind}</div>
           <div className="sub-title">
-            Status: {status} {qCheckMsg(sample, container)} &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; {insText}
+            类型： {status} {qCheckMsg(sample, container)} &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; {insText}
           </div>
           <div className="desc sub-title">
             <span style={{ float: 'left', marginRight: '5px' }}>
-              Content:
+              内容：
             </span>
             <QuillViewer value={contentOneLine} />
           </div>

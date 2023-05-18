@@ -67,7 +67,7 @@ const Header = ({ device, toggleFullScreen }) => {
         </Button>
       </OverlayTrigger>
       <OverlayTrigger placement="bottom"
-        overlay={<Tooltip id="fullSample">FullScreen</Tooltip>}>
+        overlay={<Tooltip id="fullSample">全屏</Tooltip>}>
         <Button bsStyle="info" bsSize="xsmall" className="button-right"
           onClick={() => toggleFullScreen()}>
           <i className="fa fa-expand"></i>

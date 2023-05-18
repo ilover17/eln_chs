@@ -79,7 +79,7 @@ const MaterialGroup = ({
 };
 
 const switchEquivTooltip = () => (
-  <Tooltip id="assign_button">Lock/unlock Equiv <br /> for target amounts</Tooltip>
+  <Tooltip id="assign_button"> 锁定/解锁设备 <br /> 针对目标数额</Tooltip>
 );
 
 const SwitchEquivButton = (lockEquivColumn, switchEquiv) => {
@@ -104,15 +104,15 @@ const GeneralMaterialGroup = ({
   const isReactants = materialGroup === 'reactants';
   let headers = {
     ref: 'Ref',
-    group: 'Starting materials',
+    group: '初始材料',
     show_label: 'L/S',
     tr: 'T/R',
-    mass: 'Mass',
+    mass: '质量',
     reaction_coefficient: 'Coeff',
-    amount: 'Amount',
+    amount: '数量',
     loading: 'Loading',
     concn: 'Conc',
-    vol: 'Vol',
+    vol: '体积',
     eq: 'Equiv'
   };
 
@@ -152,8 +152,8 @@ const GeneralMaterialGroup = ({
   }
 
   if (materialGroup === 'products') {
-    headers.group = 'Products';
-    headers.eq = 'Yield';
+    headers.group = '产物';
+    headers.eq = '产量';
   }
 
   const refTHead = (materialGroup !== 'products') ? headers.ref : null;

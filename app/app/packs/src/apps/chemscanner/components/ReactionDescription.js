@@ -52,10 +52,10 @@ export default class ReactionDescription extends React.Component {
     return (
       <div className="scanned-reaction-desc">
         <div>
-          <Label>reaction</Label>
+          <Label>反应</Label>
           <ul>
             <li key="scanned-reaction-status">
-              <b>status: </b>
+              <b>状态: </b>
               {statusLabel}
             </li>
             {Object.keys(rDesc).map(k => (
@@ -68,7 +68,7 @@ export default class ReactionDescription extends React.Component {
         </div>
         {steps.map(step => (
           <div key={`reaction-${rId}-${step.number}`}>
-            <Label bsStyle="info">step {step.number}</Label>
+            <Label bsStyle="info">步骤 {step.number}</Label>
             <ul>
               {
                 ['description', 'temperature', 'time'].map((prop) => {
@@ -85,7 +85,7 @@ export default class ReactionDescription extends React.Component {
                 })
               }
               <li key={`reaction-${rId}-step-${step.number}-reagents`}>
-                <b>reagents: </b>
+                <b>反应物: </b>
                 <ul>
                   {step.reagents.map(x => <li key={`${rId}-${step.number}-${x}`}>{x}</li>)}
                 </ul>

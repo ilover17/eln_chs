@@ -199,7 +199,7 @@ export default class ScreenDetails extends Component {
         </OverlayTrigger>
         <OverlayTrigger
           placement="bottom"
-          overlay={<Tooltip id="fullSample">FullScreen</Tooltip>}
+          overlay={<Tooltip id="fullSample">全屏</Tooltip>}
         >
           <Button
             bsStyle="info"

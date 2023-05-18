@@ -48,13 +48,13 @@ export default class ModalReactionExport extends React.Component {
       <div>
         <div className='export-container'>
           <FormGroup name="options" value={this.state.value} >
-            <Radio onChange={() => onChange(0)} checked={this.state.value == 0} value={0}>starting_materials &gt;&gt; products</Radio>
-            <Radio onChange={() => onChange(1)} checked={this.state.value == 1} value={1}>starting_materials.reactants &gt;&gt; products</Radio>
-            <Radio onChange={() => onChange(2)} checked={this.state.value == 2} value={2}>starting_materials.reactants.solvents &gt;&gt; products</Radio>
-            <Radio onChange={() => onChange(3)} checked={this.state.value == 3} value={3}>starting_materials &gt; reactants &gt; products</Radio>
-            <Radio onChange={() => onChange(4)} checked={this.state.value == 4} value={4}>starting_materials &gt; reactants.solvents &gt; products</Radio>
-            <Radio onChange={() => onChange(5)} checked={this.state.value == 5} value={5}>starting_materials &gt; reactants &gt; solvents &gt; products</Radio>
-            <Radio onChange={() => onChange(6)} checked={this.state.value == 6} value={6}>starting_materials , reactants , solvents , products</Radio>
+            <Radio onChange={() => onChange(0)} checked={this.state.value == 0} value={0}>初始材料 &gt;&gt; 产物</Radio>
+            <Radio onChange={() => onChange(1)} checked={this.state.value == 1} value={1}>初始材料.反应物 &gt;&gt; 产物</Radio>
+            <Radio onChange={() => onChange(2)} checked={this.state.value == 2} value={2}>初始材料.反应物.溶剂 &gt;&gt; 产物</Radio>
+            <Radio onChange={() => onChange(3)} checked={this.state.value == 3} value={3}>初始材料 &gt; 反应物 &gt; 产物</Radio>
+            <Radio onChange={() => onChange(4)} checked={this.state.value == 4} value={4}>初始材料 &gt; 反应物.溶剂 &gt; 产物</Radio>
+            <Radio onChange={() => onChange(5)} checked={this.state.value == 5} value={5}>初始材料 &gt; 反应物 &gt; 溶剂 &gt; 产物</Radio>
+            <Radio onChange={() => onChange(6)} checked={this.state.value == 6} value={6}>初始材料 , 反应物 , 溶剂 , 产物</Radio>
           </FormGroup>
         </div>
         {this.buttonBar()}

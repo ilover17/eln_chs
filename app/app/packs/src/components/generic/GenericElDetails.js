@@ -413,7 +413,7 @@ export default class GenericElDetails extends Component {
         </OverlayTrigger>
         <ConfirmClose el={genericEl} />
         {copyBtn}
-        <OverlayTrigger placement="bottom" overlay={<Tooltip id="tip_fullscreen_btn">FullScreen</Tooltip>}>
+        <OverlayTrigger placement="bottom" overlay={<Tooltip id="tip_fullscreen_btn">全屏</Tooltip>}>
           <Button bsStyle="info" bsSize="xsmall" className="button-right" onClick={() => this.props.toggleFullScreen()}>
             <i className="fa fa-expand" aria-hidden="true" />
           </Button>

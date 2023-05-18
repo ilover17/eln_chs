@@ -44,19 +44,19 @@ class GatePushBtn extends React.Component {
     if (status === 'confirm') {
       content = (
         <div>
-          Mirror Sample and Reaction data to your chemotion.net account ?
+          将样本和反应数据镜像到您的chemation.net帐户 ?
           <ButtonGroup>
             <Button
               bsStyle="danger"
               bsSize="xsmall"
               onClick={e => this.transmitting(e, this.props.collection_id, 'POST')}
-            >Yes
+            >是
             </Button>
             <Button
               bsStyle="warning"
               bsSize="xsmall"
               onClick={() => this.ovltg.hide()}
-            >No
+            >否
             </Button>
           </ButtonGroup>
         </div>
@@ -64,13 +64,13 @@ class GatePushBtn extends React.Component {
     } else if (status === 'unavailable') {
       content = (
         <div>
-          Sorry, it seems chemotion-repository.net can not be reached at the moment
+          对不起，目前无法访问化合物库！
           <ButtonGroup>
             <Button
               bsStyle="warning"
               bsSize="xsmall"
               onClick={() => this.ovltg.hide()}
-            >OK
+            >确认
             </Button>
           </ButtonGroup>
         </div>
@@ -88,19 +88,20 @@ class GatePushBtn extends React.Component {
                 window.location.assign(`${target}pages/tokens?origin=${encodeURI(window.location.origin)}`);
                 // window.open(`${target}pages/tokens?origin=${encodeURI(window.location.origin)}` , '_blank');
               }}
-            >Yes
+            >是
             </Button>
             <Button
               bsStyle="warning"
               bsSize="xsmall"
               onClick={() => this.ovltg.hide()}
-            >No
+            >否
             </Button>
           </ButtonGroup>
         </div>
       );
     } else if (this.ovlg) { this.ovltg.hide(); }
-    return <Tooltip id="chemotion-net-gate">{content}</Tooltip>;
+    return <div></div>;
+    //return <Tooltip id="chemotion-net-gate">{content}</Tooltip>;
   }
 
   render() {

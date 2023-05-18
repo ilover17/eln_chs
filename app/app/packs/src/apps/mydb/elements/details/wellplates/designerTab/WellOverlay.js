@@ -85,8 +85,8 @@ const content = (
     value: 'Name',
     disabled: isDisable()
   }, {
-    label: 'External label',
-    value: 'External label',
+    label: '外部标签',
+    value: '外部标签',
     disabled: isDisable()
   }, {
     label: 'Molecular structure',

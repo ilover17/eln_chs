@@ -155,7 +155,7 @@ export default class ElementsTableEntries extends Component {
 
   topSecretIcon(element) {
     if (element.type === 'sample' && element.is_top_secret === true) {
-      const tooltip = (<Tooltip id="top_secret_icon">机密</Tooltip>);
+      const tooltip = (<Tooltip id="top_secret_icon">绝密</Tooltip>);
       return (
         <OverlayTrigger placement="top" overlay={tooltip}>
           <i className="fa fa-user-secret" />

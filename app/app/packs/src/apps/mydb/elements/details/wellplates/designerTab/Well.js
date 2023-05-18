@@ -21,7 +21,7 @@ export default class Well extends Component {
         for (let i = 0; i < labels.length; i++) {
           if (labels[i] == 'Name') {
             displayLabel += sample.name + ', ';
-          } else if (labels[i] == 'External label') {
+          } else if (labels[i] == '外部标签') {
             displayLabel += sample.external_label + ', ';
           }
         }

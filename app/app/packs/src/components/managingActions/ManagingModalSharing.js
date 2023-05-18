@@ -358,7 +358,7 @@ export default class ManagingModalSharing extends React.Component {
             color: '#d9534f', fontSize: '12px', paddingLeft: '8px', paddingTop: '4px', display: displayWarning
           }}
           >
-            <i className="fa fa-exclamation-circle" aria-hidden="true" />&nbsp;Transfering ownership applies for all sub collections.
+            <i className="fa fa-exclamation-circle" aria-hidden="true" />&nbsp;所有权转让适用于所有子集合.
           </div>
         </FormGroup>
         <FormGroup controlId="sampleDetailLevelSelect">
@@ -366,11 +366,11 @@ export default class ManagingModalSharing extends React.Component {
           <FormControl componentClass="select"
             onChange={(e) => this.handleDLChange(e, 'sample')}
             value={this.state.sampleDetailLevel || ''}>
-            <option value='0'>Molecular mass of the compound, external label</option>
-            <option value='1'>Molecule, structure</option>
-            <option value='2'>Analysis Result + Description</option>
-            <option value='3'>Analysis Datasets</option>
-            <option value='10'>Everything</option>
+            <option value='0'>化合物的分子质量, 外部标签</option>
+            <option value='1'>分子，结构</option>
+            <option value='2'>分析结果 + 说明</option>
+            <option value='3'>分析数据集</option>
+            <option value='10'>所有内容</option>
           </FormControl>
         </FormGroup>
         <FormGroup controlId="reactionDetailLevelSelect">
@@ -378,8 +378,8 @@ export default class ManagingModalSharing extends React.Component {
           <FormControl componentClass="select"
             onChange={(e) => this.handleDLChange(e, 'reaction')}
             value={this.state.reactionDetailLevel || ''}>
-            <option value='0'>Observation, description, calculation</option>
-            <option value='10'>Everything</option>
+            <option value='0'>观察、描述、计算</option>
+            <option value='10'>所有内容</option>
           </FormControl>
         </FormGroup>
         <FormGroup controlId="wellplateDetailLevelSelect">
@@ -387,9 +387,9 @@ export default class ManagingModalSharing extends React.Component {
           <FormControl componentClass="select"
             onChange={(e) => this.handleDLChange(e, 'wellplate')}
             value={this.state.wellplateDetailLevel || ''}>
-            <option value='0'>Wells (Positions)</option>
-            <option value='1'>Readout</option>
-            <option value='10'>Everything</option>
+            <option value='0'>孔井（位置）</option>
+            <option value='1'>读数</option>
+            <option value='10'>所有内容</option>
           </FormControl>
         </FormGroup>
         <FormGroup controlId="screenDetailLevelSelect">
@@ -397,8 +397,8 @@ export default class ManagingModalSharing extends React.Component {
           <FormControl componentClass="select"
             onChange={(e) => this.handleDLChange(e, 'screen')}
             value={this.state.screenDetailLevel || ''}>
-            <option value='0'>Name, description, condition, requirements</option>
-            <option value='10'>Everything</option>
+            <option value='0'>名称、描述、条件、要求</option>
+            <option value='10'>所有内容</option>
           </FormControl>
         </FormGroup>
         <FormGroup controlId="screenDetailLevelSelect">
@@ -406,7 +406,7 @@ export default class ManagingModalSharing extends React.Component {
           <FormControl componentClass="select"
             onChange={(e) => this.handleDLChange(e, 'element')}
             value={this.state.elementDetailLevel || ''}>
-            <option value='10'>Everything</option>
+            <option value='10'>所有内容</option>
           </FormControl>
         </FormGroup>
         {this.selectUsers()}

@@ -231,7 +231,7 @@ export default class WellplateDetails extends Component {
             <i className="fa fa-floppy-o " />
           </Button>
         </OverlayTrigger>
-        <OverlayTrigger placement="bottom" overlay={<Tooltip id="fullSample">FullScreen</Tooltip>}>
+        <OverlayTrigger placement="bottom" overlay={<Tooltip id="fullSample">全屏</Tooltip>}>
           <Button bsStyle="info" bsSize="xsmall" className="button-right" onClick={() => this.props.toggleFullScreen()}>
             <i className="fa fa-expand" />
           </Button>
