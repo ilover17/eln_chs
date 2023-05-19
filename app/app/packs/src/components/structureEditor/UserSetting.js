@@ -57,12 +57,12 @@ const UserSetting = () => {
 
   return (
     <Panel>
-      <Panel.Heading><Panel.Title>Structure Editor</Panel.Title></Panel.Heading>
+      <Panel.Heading><Panel.Title>结构式编辑器</Panel.Title></Panel.Heading>
       <Panel.Body>
         <Row className="profile-row">
-          <Col sm={2}><b>Current default is</b></Col>
+          <Col sm={2}><b>当前默认</b></Col>
           <Col sm={2}>{editor?.default}</Col>
-          <Col sm={2}><b>Editor Selection</b></Col>
+          <Col sm={2}><b>编辑器选择</b></Col>
           <Col sm={2}>
             <Select
               name="editor selection"
@@ -77,7 +77,7 @@ const UserSetting = () => {
               {
                 editor.changing ? <i className="fa fa-spinner fa-pulse" aria-hidden="true" /> : null
               }
-              Update user profiles
+              更新用户Profiles
             </Button>
           </Col>
         </Row>

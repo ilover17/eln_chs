@@ -142,13 +142,13 @@ export default class CreateButton extends React.Component {
     return (
       <Modal animation={false} show={modalProps.show} onHide={() => this.handleModalHide()}>
         <Modal.Header closeButton>
-          <Modal.Title>Create Wellplates from Samples</Modal.Title>
+          <Modal.Title>从样本创建孔盘</Modal.Title>
         </Modal.Header>
         <Modal.Body>
-          You have selected {modalProps.sampleCount} samples. Please fill in the number of wellplates you would like to create.
+          当前选中了{modalProps.sampleCount}样本. 请填写您想要创建的孔盘数量.
           <p />
           <FormGroup controlId="wellplateInput">
-            <ControlLabel>Number of wellplates</ControlLabel>
+            <ControlLabel>孔盘数量</ControlLabel>
             <FormControl
               type="text"
               inputRef={(input) => { this.wellplateInput = input; }}
@@ -158,7 +158,7 @@ export default class CreateButton extends React.Component {
 
           <ButtonToolbar>
             <Button bsStyle="primary" onClick={() => this.handleModalHide()}>取消</Button>
-            <Button bsStyle="warning" onClick={() => this.bulkCreateWellplates()}>Submit</Button>
+            <Button bsStyle="warning" onClick={() => this.bulkCreateWellplates()}>确定</Button>
           </ButtonToolbar>
         </Modal.Body>
       </Modal>
@@ -245,11 +245,11 @@ export default class CreateButton extends React.Component {
     const { layout } = this.state;
     const type = UserStore.getState().currentType;
     const elements = [
-      { name: 'sample', label: 'Sample' },
-      { name: 'reaction', label: 'Reaction' },
-      { name: 'wellplate', label: 'Wellplate' },
+      { name: 'sample', label: '样本' },
+      { name: 'reaction', label: '反应' },
+      { name: 'wellplate', label: '孔盘' },
       { name: 'screen', label: 'Screen' },
-      { name: 'research_plan', label: 'Research Plan' }
+      { name: 'research_plan', label: '研究计划' }
     ];
     let genericEls = [];
     const currentUser = (UserStore.getState() && UserStore.getState().currentUser) || {};
@@ -262,7 +262,7 @@ export default class CreateButton extends React.Component {
 
     sortedLayout?.forEach(([k]) => {
       const el = elements.concat(genericEls).find((ael) => ael.name === k);
-      if (el) itemTables.push(<MenuItem id={`create-${el.name}-button`} key={el.name} onSelect={() => this.createElementOfType(`${el.name}`)}>Create {el.label}</MenuItem>);
+      if (el) itemTables.push(<MenuItem id={`create-${el.name}-button`} key={el.name} onSelect={() => this.createElementOfType(`${el.name}`)}>创建 {el.label}</MenuItem>);
     });
 
     return (

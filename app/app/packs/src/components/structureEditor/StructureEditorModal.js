@@ -22,7 +22,7 @@ const EditorList = (props) => {
   const { options, fnChange, value } = props;
   return (
     <FormGroup>
-      <div className="col-lg-2 col-md-2"><ControlLabel>Structure Editor</ControlLabel></div>
+      <div className="col-lg-2 col-md-2"><ControlLabel>结构式编辑器</ControlLabel></div>
       <div className="col-lg-6 col-md-8">
         <Select
           className="status-select"
@@ -251,11 +251,11 @@ export default class StructureEditorModal extends React.Component {
         >
           <Modal.Header closeButton>
             <Modal.Title>
-              <EditorList
+              {/* <EditorList
                 value={editor.id}
                 fnChange={this.handleEditorSelection}
                 options={editorOptions}
-              />
+              /> */}
               {citeMarvin}
             </Modal.Title>
           </Modal.Header>

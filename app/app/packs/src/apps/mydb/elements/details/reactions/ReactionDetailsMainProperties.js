@@ -63,7 +63,7 @@ export default class ReactionDetailsMainProperties extends Component {
   render() {
     const { reaction, onInputChange } = this.props;
     const temperatureTooltip = (
-      <Tooltip id="show_temperature">Show temperature chart</Tooltip>
+      <Tooltip id="show_temperature">显示温度图表</Tooltip>
     );
 
     const temperatureDisplay = reaction.temperature_display;
@@ -110,7 +110,7 @@ export default class ReactionDetailsMainProperties extends Component {
           </Col>
           <Col md={3}>
             <FormGroup>
-              <ControlLabel>Status</ControlLabel>
+              <ControlLabel>状态</ControlLabel>
               <Select
                 className="status-select reaction-status-change"
                 name="status"
@@ -130,7 +130,7 @@ export default class ReactionDetailsMainProperties extends Component {
           </Col>
           <Col md={3}>
             <FormGroup>
-              <ControlLabel>Temperature</ControlLabel>
+              <ControlLabel>温度</ControlLabel>
               <InputGroup>
                 <InputGroup.Button>
                   <OverlayTrigger placement="bottom" overlay={temperatureTooltip}>

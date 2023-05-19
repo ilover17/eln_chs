@@ -25,7 +25,7 @@ const handleNotification = (nots, act, needCallback = true) => {
       }
 
       const notification = {
-        title: `From ${n.sender_name} on ${n.updated_at}`,
+        title: `来自 ${n.sender_name} 于：${n.updated_at}`,
         message: newText,
         level: n.content.level || 'warning',
         dismissible: 'button',

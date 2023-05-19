@@ -78,18 +78,18 @@ export default class CopyElementModal extends React.Component {
       <span>
         <OverlayTrigger
           placement="bottom"
-          overlay={<Tooltip id="CopyElement">Copy</Tooltip>}>
+          overlay={<Tooltip id="CopyElement">复制</Tooltip>}>
           <Button id="copy-element-btn" style={{ marginLeft: '5px', display: `${canCopy}` }} bsSize="xsmall" className="button-right" bsStyle="success" onClick={this.handleModalShow}>
             <i className="fa fa-clone" />
           </Button>
         </OverlayTrigger>
         <Modal show={showModal} onHide={this.handleModalClose}>
           <Modal.Header closeButton>
-            <Modal.Title>Copy</Modal.Title>
+            <Modal.Title>复制</Modal.Title>
           </Modal.Header>
           <Modal.Body>
             <span className="select-collection">
-              <b>Copy to Collection</b>
+              <b>复制到集合</b>
               <span className="select-component">
                 <CollectionSelect
                   value={selectedCol}
@@ -100,7 +100,7 @@ export default class CopyElementModal extends React.Component {
           </Modal.Body>
           <Modal.Footer>
             <Button bsStyle="primary" onClick={this.handleModalClose} className="pull-left">关闭</Button>
-            <Button id="submit-copy-element-btn" bsStyle="success" onClick={this.copyElement} className="pull-left">Copy</Button>
+            <Button id="submit-copy-element-btn" bsStyle="success" onClick={this.copyElement} className="pull-left">复制</Button>
           </Modal.Footer>
         </Modal>
       </span>

@@ -210,7 +210,7 @@ export default class MatrixManagement extends React.Component {
                 <th width="2%">#</th>
                 <th width="5%">Actions</th>
                 <th width="3%">ID</th>
-                <th width="10%">Function name</th>
+                <th width="10%">方法名称</th>
                 <th width="10%">描述</th>
                 <th width="10%">Set globally</th>
                 <th width="40%">Enabled for</th>

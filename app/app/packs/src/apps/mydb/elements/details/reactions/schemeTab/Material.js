@@ -128,7 +128,7 @@ class Material extends Component {
           {has_density ? `density = ${density}` : `molarity = ${molarity_value} ${molarity_unit}`}
         </Tooltip>
       )
-      : <Tooltip id="density_info">no density or molarity defined</Tooltip>;
+      : <Tooltip id="density_info">未定义密度或摩尔浓度</Tooltip>;
 
     const metricPrefixes = ['m', 'n', 'u'];
     const metric = (material.metrics && material.metrics.length > 2 && metricPrefixes.indexOf(material.metrics[1]) > -1) ? material.metrics[1] : 'm';

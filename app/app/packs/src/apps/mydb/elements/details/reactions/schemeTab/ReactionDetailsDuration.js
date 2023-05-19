@@ -66,7 +66,7 @@ export default class ReactionDetailsDuration extends Component {
       <Row className="small-padding">
         <Col md={3} sm={6}>
           <FormGroup>
-            <ControlLabel>Start</ControlLabel>
+            <ControlLabel>开始</ControlLabel>
             <InputGroup>
               <FormControl
                 type="text"
@@ -85,7 +85,7 @@ export default class ReactionDetailsDuration extends Component {
         </Col>
         <Col md={3} sm={6}>
           <FormGroup>
-            <ControlLabel>Stop</ControlLabel>
+            <ControlLabel>结束</ControlLabel>
             <InputGroup>
               <FormControl
                 type="text"
@@ -104,13 +104,13 @@ export default class ReactionDetailsDuration extends Component {
         </Col>
         <Col md={3} sm={6}>
           <FormGroup>
-            <ControlLabel>Duration</ControlLabel>
+            <ControlLabel>持续时间</ControlLabel>
             <InputGroup>
               <FormControl type="text" value={durationCalc || ''} disabled placeholder="Duration" />
               <InputGroup.Button>
                 <OverlayTrigger
                   placement="bottom"
-                  overlay={<Tooltip id="copy_duration_to_clipboard">copy to clipboard</Tooltip>}
+                  overlay={<Tooltip id="copy_duration_to_clipboard">复制到剪切板</Tooltip>}
                 >
                   <Button disabled={!permitOn(reaction)} active className="clipboardBtn" data-clipboard-text={durationCalc || ' '}>
                     <i className="fa fa-clipboard" aria-hidden="true" />
@@ -141,7 +141,7 @@ export default class ReactionDetailsDuration extends Component {
                 onChange={event => this.handleDurationChange(event)}
               />
               <InputGroup.Button>
-                <OverlayTrigger placement="bottom" overlay={<Tooltip id="switch_duration_unit">switch duration unit</Tooltip>}>
+                <OverlayTrigger placement="bottom" overlay={<Tooltip id="switch_duration_unit">切换单位</Tooltip>}>
                   <Button disabled={!permitOn(reaction)} bsStyle="success" onClick={() => this.changeDurationUnit()}>
                     {reaction.durationUnit}
                   </Button>

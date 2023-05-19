@@ -69,7 +69,7 @@ export default class MaterialCalculations extends Component {
       <td style={inputsStyle}></td>
       <td style={inputsStyle}></td>
       <td style={inputsStyle}></td>
-      <td style={inputsStyle}><label>Adjusted: </label></td>
+      <td style={inputsStyle}><label>已调整: </label></td>
       <td style={inputsStyle}>
         <NumeralInputWithUnitsCompo
           key={material.id}

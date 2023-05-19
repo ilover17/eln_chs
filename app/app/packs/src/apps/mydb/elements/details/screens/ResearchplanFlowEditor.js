@@ -108,7 +108,7 @@ const ResearchplanFlowEditor = (props) => {
     return (
       <Panel bsStyle="primary">
         <Panel.Heading>
-          <Panel.Title>Connection name</Panel.Title>
+          <Panel.Title>连接名称</Panel.Title>
         </Panel.Heading>
         <Panel.Body>
           <InputGroup>
@@ -117,9 +117,7 @@ const ResearchplanFlowEditor = (props) => {
                 className="btn btn-danger"
                 type="button"
                 onClick={() => labelInput.current.value = currentEdge.label}
-              >
-                Reset
-              </Button>
+              >重设</Button>
             </InputGroup.Button>
             <input name="edgeLabel" className="form-control" ref={labelInput} defaultValue={currentEdge.label} />
             <InputGroup.Button>
@@ -127,9 +125,7 @@ const ResearchplanFlowEditor = (props) => {
                 className="btn btn-success"
                 type="button"
                 onClick={() => changeLabelOfCurrentEdge(labelInput.current.value)}
-              >
-                Save
-              </Button>
+              >保存</Button>
             </InputGroup.Button>
           </InputGroup>
         </Panel.Body>

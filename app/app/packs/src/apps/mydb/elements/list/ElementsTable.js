@@ -203,7 +203,7 @@ export default class ElementsTable extends React.Component {
       <Form horizontal className='list-show-count'>
         <FormGroup>
           <InputGroup>
-            <InputGroup.Addon>Show</InputGroup.Addon>
+            <InputGroup.Addon>展示</InputGroup.Addon>
             <FormControl type="text" style={{ textAlign: 'center', zIndex: 0 }}
               onChange={event => this.handleNumberOfResultsChange(event)}
               value={ui.number_of_results ? ui.number_of_results : 0} />

@@ -52,9 +52,9 @@ class ResearchPlanDetailsFieldTableColumnNameModal extends Component {
 
     let title;
     if (modal.action === 'insert') {
-      title = 'Insert column';
+      title = '插入列';
     } else if (modal.action === 'rename') {
-      title = 'Rename column';
+      title = '重命名列';
     }
 
     const validationState = columnNameError ? 'error' : null;
@@ -69,7 +69,7 @@ class ResearchPlanDetailsFieldTableColumnNameModal extends Component {
         <Modal.Body >
           <div>
             <FormGroup validationState={validationState}>
-              <ControlLabel>Column name</ControlLabel>
+              <ControlLabel>列名称</ControlLabel>
               <FormControl
                 type="text"
                 value={columnNameValue}
@@ -81,7 +81,7 @@ class ResearchPlanDetailsFieldTableColumnNameModal extends Component {
           <div>
             <ButtonToolbar>
               <Button bsStyle="warning" onClick={onHide}>
-                Cancel
+                取消
               </Button>
               <Button bsStyle="primary" onClick={this.handleSubmit.bind(this)}>
                 {title}
